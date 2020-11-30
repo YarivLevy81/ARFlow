@@ -70,5 +70,8 @@ if __name__ == '__main__':
     vis_flow = flow_to_image(np_flow_12)
 
     fig = plt.figure()
+    from time import time
+    cmap = plt.cm.jet
+    plt.imsave(f'images/flow_{time()}.png', vis_flow, cmap=cmap)
     plt.imshow(vis_flow)
     plt.show()
